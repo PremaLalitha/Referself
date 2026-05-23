@@ -1,0 +1,210 @@
+/* =============================
+   CommentsPage.css – ReferShelf
+   ============================= */
+
+.comments-container {
+  background-color: #F9F3EF;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  padding: 2rem;
+  color: #1B3C53;
+}
+
+/* ===== Heading ===== */
+.comments-container h1 {
+  text-align: center;
+  color: #1B3C53;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Back Button ===== */
+.comments-container button {
+  background-color: #456882;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.comments-container button:hover {
+  background-color: #1B3C53;
+}
+
+/* ===== Message ===== */
+.message {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+.message.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #22c55e;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* ===== Comments List ===== */
+.comments-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===== Comment Card ===== */
+.comment-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(27, 60, 83, 0.08);
+  border-left: 5px solid #456882;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 16px rgba(27, 60, 83, 0.1);
+}
+
+.comment-item p {
+  margin: 0.4rem 0;
+  color: #1B3C53;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.comment-item strong {
+  color: #456882;
+}
+
+/* ===== Comment Actions ===== */
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.comment-actions button {
+  background-color: #456882;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comment-actions button:hover {
+  background-color: #1B3C53;
+}
+
+.comment-actions button:last-child {
+  background-color: #e63946;
+}
+
+.comment-actions button:last-child:hover {
+  background-color: #c53030;
+}
+
+/* ===== Replies ===== */
+.replies {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #D2C1B6;
+}
+
+.reply-item {
+  background-color: #F9F3EF;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(27, 60, 83, 0.05);
+}
+
+/* ===== Edit Mode ===== */
+.edit-comment textarea {
+  width: 100%;
+  border: 1px solid #D2C1B6;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.edit-comment textarea:focus {
+  border-color: #456882;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.edit-buttons button {
+  background-color: #456882;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-buttons button:hover {
+  background-color: #1B3C53;
+}
+
+.edit-buttons button:last-child {
+  background-color: #D2C1B6;
+  color: #1B3C53;
+}
+
+.edit-buttons button:last-child:hover {
+  background-color: #b8a499;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .comments-container {
+    padding: 1rem;
+  }
+
+  .comment-item {
+    padding: 1.2rem;
+  }
+
+  .comment-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .edit-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

@@ -27,6 +27,12 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
 ];
+// Add production frontend URLs from environment variable
+if (process.env.ALLOWED_ORIGINS) {
+  process.env.ALLOWED_ORIGINS.split(',').forEach(origin => {
+    allowedOrigins.push(origin.trim());
+  });
+}
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {

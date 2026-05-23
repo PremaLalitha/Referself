@@ -1,0 +1,165 @@
+/* SignupPage.css */
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1B3C53 0%, #456882 100%);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-container h2 {
+  color: #F9F3EF;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container form {
+  background: #F9F3EF;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Input Fields */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #D2C1B6;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: white;
+  color: #1B3C53;
+}
+
+.signup-container input:focus {
+  outline: none;
+  border-color: #456882;
+  box-shadow: 0 0 0 3px rgba(69, 104, 130, 0.15);
+}
+
+/* Buttons */
+.signup-container button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(135deg, #1B3C53 0%, #456882 100%);
+  color: #F9F3EF;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.signup-container button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 60, 83, 0.4);
+}
+
+.signup-container button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Google Signup Button */
+.google-signup-btn {
+  width: 100%;
+  background: white;
+  color: #1B3C53;
+  border: 2px solid #D2C1B6;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.google-signup-btn:hover:not(:disabled) {
+  background: #F9F3EF;
+  border-color: #456882;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-signup-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.google-signup-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Links */
+.signup-container > p {
+  color: #000000;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.signup-container .link {
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.signup-container .link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container h2 {
+    font-size: 2rem;
+  }
+
+  .signup-container form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .signup-container form {
+    padding: 1.5rem;
+  }
+
+  .signup-container input,
+  .signup-container button {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .google-signup-btn {
+    font-size: 0.95rem;
+  }
+}

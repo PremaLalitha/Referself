@@ -1,0 +1,261 @@
+/* ============ DARK MODE THEME ============*/
+
+body.dark-mode {
+  background-color: #0D1A26; /* Deep Navy */
+  color: #ffffff; /* Soft white */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Text General */
+body.dark-mode, 
+body.dark-mode * {
+  color: #F8F5F2 !important;
+}
+
+/* ✅ Navbar */
+body.dark-mode .navbar {
+  background-color: #142332;
+  border-bottom: 1px solid #1B3C53;
+}
+
+body.dark-mode .nav-link {
+  opacity: 0.9;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #6EB4FF !important;
+  opacity: 1;
+}
+
+body.dark-mode .logo {
+  font-weight: 600;
+  color: #FFFFFF !important;
+}
+
+/* ✅ Buttons */
+body.dark-mode button,
+body.dark-mode .add-todo-btn {
+  background-color: #285577;
+  color: #FFFFFF !important;
+  border: 1px solid #3C7BA6;
+  transition: 0.3s ease;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .add-todo-btn:hover {
+  background-color: #3C7BA6;
+  transform: translateY(-1px);
+}
+
+/* ✅ Inputs & Form Elements */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #162533;
+  border: 1px solid #2C5D85;
+  color: #FFFFFF !important;
+  transition: 0.3s ease;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #C7BEB8;
+  opacity: 0.7;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: #6EB4FF;
+  box-shadow: 0 0 6px rgba(110,180,255,0.6);
+}
+
+/* ✅ Cards / Containers */
+body.dark-mode .stat-card,
+body.dark-mode .activity-item,
+body.dark-mode .about-main,
+body.dark-mode .upload-container,
+body.dark-mode .edit-container,
+body.dark-mode .profile-box {
+  background-color: #152738;
+  border: 1px solid #1E4B6E;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Dashboard, Resources, Todo List in black */
+body.dark-mode .resource-card,
+body.dark-mode .todo-item,
+body.dark-mode .dashboard-card {
+  background-color: #000000;
+  border: 1px solid #1E4B6E;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Profile content in dark navy */
+body.dark-mode .profile-view {
+  background-color: #152738;
+  border: 1px solid #1E4B6E;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* About page contact section in black */
+body.dark-mode .about-contact,
+body.dark-mode .about-contact * {
+  color: #000000 !important;
+}
+
+/* Profile page contact modal in black */
+body.dark-mode .modal h2,
+body.dark-mode .modal p,
+body.dark-mode .modal strong,
+body.dark-mode .modal label {
+  color: #000000 !important;
+}
+
+/* Profile info text in dark mode */
+body.dark-mode .profile-info p {
+  color: #F8F5F2 !important;
+}
+
+body.dark-mode .profile-info strong {
+  color: #F8F5F2 !important;
+}
+
+/* ✅ Headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #000000 !important;
+}
+
+/* Specific headings in homepage to black */
+body.dark-mode .home-page h2.section-title,
+body.dark-mode .home-page h3,
+body.dark-mode .todo-list h3 {
+  color: #000000 !important;
+}
+
+/* Subjects heading in subject page to black */
+body.dark-mode .subject-container h2 {
+  color: #000000 !important;
+}
+
+/* My Uploaded Resources heading to black */
+body.dark-mode .my-uploads h3 {
+  color: #000000 !important;
+}
+
+/* Explore Academic Resources heading to white */
+body.dark-mode .explore-container h2 {
+  color: #F8F5F2 !important;
+}
+
+/* Upload Academic Resource heading to white */
+body.dark-mode .upload-container h2 {
+  color: #F8F5F2 !important;
+}
+
+/* ✅ Links */
+body.dark-mode a {
+  color: #000000;
+  text-decoration: none;
+}
+
+body.dark-mode a:hover {
+  color: #000000;
+}
+
+/* ✅ Table */
+body.dark-mode table {
+  background-color: #142332;
+  border: 1px solid #1E4B6E;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #1B3C53;
+}
+
+/* ✅ Footer */
+body.dark-mode footer {
+  background-color: #142332;
+  border-top: 1px solid #1B3C53;
+}
+
+/* ✅ Modal */
+body.dark-mode .modal-content {
+  background-color: #142332;
+  border: 1px solid #2C5D85;
+}
+
+body.dark-mode .modal-content,
+body.dark-mode .modal-content * {
+  color: #000000 !important;
+}
+
+/* Cancel button in modals */
+body.dark-mode .modal .button-group button:nth-child(2) {
+  background-color: #1B3C53;
+  color: #FFFFFF !important;
+}
+
+/* Delete account button */
+body.dark-mode .delete-btn {
+  background-color: #dc3545;
+  color: #ffffff !important;
+}
+
+/* Logout button in navbar */
+body.dark-mode .logout-btn {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+}
+
+/* ✅ Todo Styling */
+body.dark-mode .todo-item:hover {
+  background-color: #1C3E55;
+}
+
+body.dark-mode .todo-item.completed {
+  background-color: #1B4D35;
+  border-color: #37C759;
+}
+
+body.dark-mode .edit-input {
+  background-color: #162533;
+  border: 1px solid #3C7BA6;
+}
+
+/* ✅ Smooth click animations */
+button, input, select, textarea {
+  transition: 0.25s ease !important;
+}
+
+/* ============ ⭐ STAR RATING ============*/
+
+.star {
+  font-size: 20px;
+  cursor: pointer;
+  color: #c7c7c7; /* default empty star (soft grey) */
+  transition: 0.2s ease;
+}
+
+.star.filled {
+  color: #FFEFA3 !important;  /* Light soft yellow (light mode) */
+  text-shadow: 0 0 6px rgba(255, 239, 163, 0.7);
+}
+
+/* ⭐ Dark Mode */
+body.dark-mode .star {
+  color: #ffffff;
+}
+
+body.dark-mode .star.filled {
+  color: yellow !important;  
+}
+
+/* Hover effect */
+.star:hover {
+  transform: scale(1.15);
+}

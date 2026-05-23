@@ -1,0 +1,87 @@
+/* AuthChoicePage.css */
+
+.auth-choice-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1B3C53 0%, #456882 100%);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-choice-container h2 {
+  color: #F9F3EF;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(27, 60, 83, 0.4);
+}
+
+.auth-choice-container p {
+  color: #F9F3EF;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.auth-choice-container button {
+  background: #D2C1B6;
+  color: #1B3C53;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0.75rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(27, 60, 83, 0.25);
+}
+
+.auth-choice-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(27, 60, 83, 0.4);
+  background: #456882;
+  color: #F9F3EF;
+}
+
+.auth-choice-container button:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-choice-container h2 {
+    font-size: 2rem;
+  }
+
+  .auth-choice-container p {
+    font-size: 1.1rem;
+  }
+
+  .auth-choice-container button {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-choice-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .auth-choice-container p {
+    font-size: 1rem;
+  }
+
+  .auth-choice-container button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    min-width: 160px;
+  }
+}

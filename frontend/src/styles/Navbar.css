@@ -1,0 +1,151 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1B3C53;
+  color: #F9F3EF;
+  padding: 12px 24px;
+  box-shadow: 0 4px 15px rgba(27, 60, 83, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #F9F3EF;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #D2C1B6;
+  outline: none;
+  width: 250px;
+  background-color: #F9F3EF;
+  color: #1B3C53;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #456882;
+  box-shadow: 0 0 5px #456882;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #F9F3EF;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #D2C1B6;
+  transform: translateY(-2px);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #F9F3EF;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+.welcome-msg {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  padding: 6px 12px;
+  color: #F9F3EF;
+  font-size: 0.9rem;
+}
+
+.coins-display,
+.streak-info-navbar {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #F9F3EF;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-profile-photo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #D2C1B6;
+}
+
+.navbar-profile-placeholder {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1B3C53;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-btn {
+  background-color: #dc3545 !important;
+  border: none;
+  color: #ffffff !important;
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333 !important;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+}

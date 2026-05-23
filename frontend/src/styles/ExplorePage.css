@@ -1,0 +1,209 @@
+/* ExplorePage.css - Consistent Theme */
+
+.explore-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1B3C53 0%, #456882 100%);
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1B3C53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explore-container h2 {
+  color: #F9F3EF;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #D2C1B6;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.back-button {
+  align-self: flex-start;
+  background: #F9F3EF;
+  color: #1B3C53;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(27, 60, 83, 0.3);
+}
+
+.back-button:hover {
+  background: #D2C1B6;
+  color: #1B3C53;
+  transform: translateY(-2px);
+}
+
+/* Search Bar */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #D2C1B6;
+  font-size: 1rem;
+  outline: none;
+  background-color: #F9F3EF;
+  color: #1B3C53;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(27, 60, 83, 0.1);
+}
+
+.search-container input:focus {
+  border-color: #456882;
+  box-shadow: 0 0 0 3px rgba(69, 104, 130, 0.2);
+}
+
+/* Resources List */
+.resources-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Resource Card */
+.resource-item {
+  background: #F9F3EF;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(27, 60, 83, 0.3);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resource-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(27, 60, 83, 0.4);
+}
+
+.resource-item h3 {
+  color: #1B3C53;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #D2C1B6;
+  padding-bottom: 0.3rem;
+}
+
+.resource-item p {
+  color: #456882;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.resource-item button {
+  background: linear-gradient(135deg, #1B3C53 0%, #456882 100%);
+  color: #F9F3EF;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resource-item button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(27, 60, 83, 0.4);
+}
+
+/* Comments Section inside each resource */
+.comments-section {
+  background: #D2C1B6;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(27, 60, 83, 0.2);
+}
+
+.comment {
+  background: #F9F3EF;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #456882;
+}
+.comment-form {
+  margin-top: 0.8rem;
+  display: flex;
+  padding:2rem;
+  gap: 0.6rem;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.comment strong {
+  color: #1B3C53;
+}
+
+.comment small {
+  color: #456882;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Like + Comment Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.action-buttons button {
+  flex: 1;
+  background: #D2C1B6;
+  color: #1B3C53;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background: #456882;
+  color: #F9F3EF;
+}
+
+/* No Resources Text */
+.explore-container p {
+  color: #F9F3EF;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .explore-container {
+    padding: 2rem 1rem;
+  }
+
+  .resources-list {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-container h2 {
+    font-size: 2rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+  }
+}
