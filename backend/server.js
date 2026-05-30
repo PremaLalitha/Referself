@@ -128,7 +128,7 @@ if (fs.existsSync(frontendDistPath)) {
   // Serve static assets (JS, CSS, images, etc.)
   app.use(express.static(frontendDistPath));
   // Fallback for client‑side routing – only when request does NOT look like a file
-  app.get('*', (req, res) => {
+  app.get('/*', (req, res) => {
     if (req.path.includes('.')) {
       // Likely a missing asset – return 404
       return res.status(404).send('Not found');
