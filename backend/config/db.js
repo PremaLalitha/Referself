@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const connectDB = async () => {
   try {
@@ -12,6 +11,7 @@ const connectDB = async () => {
         console.warn('External MongoDB connection failed:', externalErr.message);
         console.log('Falling back to in-memory MongoDB...');
         // Fallback to in-memory MongoDB for development
+        const { MongoMemoryServer } = require('mongodb-memory-server');
         const mongoServer = await MongoMemoryServer.create();
         const mongoUri = mongoServer.getUri();
         await mongoose.connect(mongoUri);
@@ -19,6 +19,7 @@ const connectDB = async () => {
       }
     } else {
       // Fallback to in-memory MongoDB for development
+      const { MongoMemoryServer } = require('mongodb-memory-server');
       const mongoServer = await MongoMemoryServer.create();
       const mongoUri = mongoServer.getUri();
       await mongoose.connect(mongoUri);
