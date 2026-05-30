@@ -1,7 +1,7 @@
 import API_BASE from '../config/api.js';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/SignupPage.css';
+import '../styles/signupPage.css';
 import { handleGoogleAuth } from '../utils/googleLogin'; // Import the corrected util
 
 function SignupPage() {
