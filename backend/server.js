@@ -122,8 +122,18 @@ app.get('/api/stats', async (req, res) => {
   }
 });
 
+// ✅ Serve frontend in production
+const frontendDistPath = path.join(__dirname, '../frontend/dist');
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+}
+
 // ✅ MongoDB connection
 connectDB();
+
 
 // 🚀 Start server
 const PORT = process.env.PORT || 5000;
