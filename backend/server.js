@@ -125,8 +125,14 @@ app.get('/api/stats', async (req, res) => {
 // ✅ Serve frontend in production
 const frontendDistPath = path.join(__dirname, '../frontend/dist');
 if (fs.existsSync(frontendDistPath)) {
+  // Serve static assets (JS, CSS, images, etc.)
   app.use(express.static(frontendDistPath));
-  app.get(/.*/, (req, res) => {
+  // Fallback for client‑side routing – only when request does NOT look like a file
+  app.get('*', (req, res) => {
+    if (req.path.includes('.')) {
+      // Likely a missing asset – return 404
+      return res.status(404).send('Not found');
+    }
     res.sendFile(path.join(frontendDistPath, 'index.html'));
   });
 }
